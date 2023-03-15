@@ -6,7 +6,10 @@ use App\Http\Controllers\Controller;
 
 class AboutPageController extends Controller{
    public function show(){
-       return view('about');
+        $date = date("Y-m-d H:i:s");
+        return view('about', [
+            "current_time" => $date
+        ]);
 	}
 	
 }

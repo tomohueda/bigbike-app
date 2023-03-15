@@ -1,11 +1,9 @@
 @include("parts.common")
 @include("parts.header")
 
-<main>
-	<h1>これはトップページです</h1>
-</main>
+@include("parts.top.section01")
+@include("parts.top.section02")
+@include("parts.top.section03")
+@include("parts.top.section04")
 
 @include("parts.footer")
-
-</body>
-</html>

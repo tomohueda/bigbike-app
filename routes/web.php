@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TopPageController;
+use App\Http\Controllers\AboutPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,9 @@ Route::get('/', function () {
 });
 */
 
+//トップページ
 //Route::get('/', 'TopPageController@show');
 Route::get('/',  [TopPageController::class, 'show']);
+
+//会社概要ページ
+Route::get('/about', [AboutPageController::class, 'show']);

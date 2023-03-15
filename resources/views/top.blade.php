@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="{{  asset('css/style.css') }}" />
-</head>
-<body>
-
+@include("parts.common")
 @include("parts.header")
 
 <main>

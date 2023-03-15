@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TopPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     //return view('welcome');
     return view('top');
 });
+*/
+
+//Route::get('/', 'TopPageController@show');
+Route::get('/',  [TopPageController::class, 'show']);

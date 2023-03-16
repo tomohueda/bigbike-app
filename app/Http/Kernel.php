@@ -25,7 +25,7 @@ class Kernel extends HttpKernel
 
     /**
      * The application's route middleware groups.
-     *
+     * アプリ全体に作用するミドルウェア
      * @var array<string, array<int, class-string|string>>
      */
     protected $middlewareGroups = [
@@ -47,7 +47,7 @@ class Kernel extends HttpKernel
 
     /**
      * The application's middleware aliases.
-     *
+     * 特定のルートにだけ作用するミドルウェア
      * Aliases may be used to conveniently assign middleware to routes and groups.
      *
      * @var array<string, class-string|string>

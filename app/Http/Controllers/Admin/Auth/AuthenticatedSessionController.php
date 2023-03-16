@@ -17,6 +17,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
+        //ログインページ
         return view('admin.auth.login');
     }
 
@@ -25,6 +26,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
+        //ログイン処理
         $request->authenticate();
 
         $request->session()->regenerate();
@@ -37,6 +39,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function destroy(Request $request): RedirectResponse
     {
+        //ログアウト処理
         Auth::guard('admin')->logout();
 
         $request->session()->invalidate();

@@ -21,7 +21,10 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                //Admin用のアクセスの時の対策
+                if(!$request->is('admin/*')) {
+                    return redirect(RouteServiceProvider::HOME);
+                }
             }
         }
 

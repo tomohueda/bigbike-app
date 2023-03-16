@@ -36,7 +36,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
     // Admin用ダッシュボード
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
-    })->middleware(['auth:admin', 'verified'])->name('dashboard');
+    })->middleware('auth:admin')->name('dashboard');
 
     require __DIR__.'/admin.php';
 });

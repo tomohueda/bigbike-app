@@ -1,7 +1,7 @@
 <x-guest-layout>
     <form method="POST" action="{{ route('admin.register') }}">
         @csrf
-
+        管理者登録
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Name')" />

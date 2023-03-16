@@ -30,7 +30,13 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-//管理者判定用
+//Admin用ルーティング
 Route::prefix('admin')->name('admin.')->group(function(){
+    
+    // Admin用ダッシュボード
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->middleware(['auth:admin'])->name('dashboard');
+
     require __DIR__.'/admin.php';
 });

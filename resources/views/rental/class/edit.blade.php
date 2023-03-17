@@ -37,8 +37,7 @@
                 {{-- 順番入力 --}}
                 <div class="form-group">
                     <label for="order">説明</label>
-                    <input type="number" class="form-control" id="order" name="order"
-                        value="{{ old('order', $class->order) }}" placeholder="0" />
+                    <input type="number" class="form-control" id="order" name="order" value="{{ old('order', $class->order) }}" placeholder="0" />
                 </div>
             </div>
             <div class="card-footer">

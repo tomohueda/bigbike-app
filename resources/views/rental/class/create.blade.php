@@ -32,14 +32,12 @@
                 {{-- レンタルクラス詳細入力 --}}
                 <div class="form-group">
                     <label for="detail">レンタルクラス詳細</label>
-                    <textarea class="form-control" id="detail" name="detail" value="{{ old('detail') }}"
-                        placeholder="詳細" /></textarea>
+                    <textarea class="form-control" id="detail" name="detail" value="{{ old('detail') }}" placeholder="詳細" /></textarea>
                 </div>
                 {{-- レンタルクラス順番入力 --}}
                 <div class="form-group">
                     <label for="order">レンタルクラス順番</label>
-                    <input type="number" class="form-control" id="order" name="order" value="{{ old('order') }}"
-                        placeholder="0" />
+                    <input type="number" class="form-control" id="order" name="order" value="{{ old('order') }}" placeholder="0" />
                 </div>
             </div>
             <div class="card-footer">

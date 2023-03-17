@@ -386,6 +386,12 @@ return [
         ],
         */
         [
+            'text' => '商品一覧',
+            'route'  => 'admin.product.index',
+            'icon' => 'fas fa-shopping-cart',
+            'active' => ['admin/product/*'],
+        ],
+        [
             'text' => 'カテゴリー一覧',
             'route'  => 'admin.product_categories.index',
             'icon' => 'fas fa-shopping-cart',

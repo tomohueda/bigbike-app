@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 //商品マスタ用
 use App\Http\Controllers\Products\ProductCategoriesController;
 use App\Http\Controllers\Products\RentalClassesController;
+use App\Http\Controllers\Products\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,5 +57,6 @@ Route::prefix('admin')->name('admin.')->group(function(){
     //商品マスター系のルーティング
     Route::resource('/product_categories', ProductCategoriesController ::class, ['except' => ['show']]);
     Route::resource('/rental_classes', RentalClassesController ::class, ['except' => ['show']]);
+    Route::resource('/product', ProductsController::class);
     require __DIR__.'/admin.php';
 });

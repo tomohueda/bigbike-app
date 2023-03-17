@@ -18,7 +18,7 @@ class ProductCategoriesController extends Controller
         //カテゴリー一覧
         //$categories = ProductCategory::all();
         // ページネーション
-        $categories = ProductCategory::paginate(5);
+        $categories = ProductCategory::orderBy('order', 'asc')->paginate(10);
 
         return view (
             'product.category.index',

@@ -26,7 +26,9 @@ class ProductCategoryRequest extends FormRequest
             // 商品名。最大値は64文字
             'name' => 'required|string|max:64',
             // 価格
-            'detail' => 'required|string|max:2048'
+            'detail' => 'string|max:2048',
+            //順番
+            'order' => 'integer|between:0,1000',
         ];
     }
 }

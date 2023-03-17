@@ -35,6 +35,12 @@
                     <input type="text" class="form-control" id="detail" name="detail" value="{{ old('detail') }}"
                         placeholder="詳細" />
                 </div>
+                {{-- カテゴリー順番入力 --}}
+                <div class="form-group">
+                    <label for="order">カテゴリー順番</label>
+                    <input type="number" class="form-control" id="order" name="order" value="{{ old('order') }}"
+                        placeholder="0" />
+                </div>
             </div>
             <div class="card-footer">
                 <div class="row">

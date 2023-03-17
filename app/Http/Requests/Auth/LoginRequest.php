@@ -41,7 +41,7 @@ class LoginRequest extends FormRequest
     {
         $this->ensureIsNotRateLimited();
 
-        // ガードに管理者かユーザを入れる
+        // 管理者orユーザーの判定
         $this->is('admin/*') ? $guard = 'admin' : $guard = 'web';
 
         //if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {

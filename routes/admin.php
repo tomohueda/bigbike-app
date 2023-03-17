@@ -63,8 +63,10 @@ use Illuminate\Support\Facades\Route;
     Route::post('confirm-password', [ConfirmablePasswordController::class, 'store'])
                 ->middleware('auth:admin');
 
-    Route::put('password', [PasswordController::class, 'update'])->name('password.update')
-                ->middleware('auth:admin');
+    Route::put('password', [PasswordController::class, 'update'])
+                ->middleware('auth:admin')
+                ->name('password.update');
+                
     //ログアウト処理
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
     //->middleware('auth:admin')

@@ -4,6 +4,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use Illuminate\Support\Facades\Route;
 
+//商品マスタ用
+use App\Http\Controllers\Products\ProductCategoriesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,6 +46,9 @@ Route::prefix('admin')->name('admin.')->group(function(){
     Route::get('/profile', [AdminProfileController::class, 'edit'])->middleware('auth:admin')->name('profile.edit');   
     Route::patch('/profile', [AdminProfileController::class, 'update'])->middleware('auth:admin')->name('profile.update');
     Route::delete('/profile', [AdminProfileController::class, 'destroy'])->middleware('auth:admin')->name('profile.destroy');
+
+    //商品マスター系のルーティング
+    Route::resource('/product_categories', ProductCategoriesController ::class, ['except' => ['show']]);
 
     require __DIR__.'/admin.php';
 });

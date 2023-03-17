@@ -383,6 +383,12 @@ return [
             'icon_color' => 'cyan',
             'url'        => '#',
         ],
+        [
+            'text' => 'カテゴリー一覧',
+            'route'  => 'admin.product_categories.index',
+            'icon' => 'fas fa-shopping-cart',
+            'active' => ['admin/product_categories/*'],
+        ],
     ],
 
     /*

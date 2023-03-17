@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 //商品マスタ用
 use App\Http\Controllers\Products\ProductCategoriesController;
+use App\Http\Controllers\Products\RentalClassesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,8 +48,13 @@ Route::prefix('admin')->name('admin.')->group(function(){
     Route::patch('/profile', [AdminProfileController::class, 'update'])->middleware('auth:admin')->name('profile.update');
     Route::delete('/profile', [AdminProfileController::class, 'destroy'])->middleware('auth:admin')->name('profile.destroy');
 
+    // 商品マスタ管理画面
+    Route::get('/manage', function () {
+        return view('admin.manage');
+    })->middleware('auth:admin')->name('manage');
+
     //商品マスター系のルーティング
     Route::resource('/product_categories', ProductCategoriesController ::class, ['except' => ['show']]);
-
+    Route::resource('/rental_classes', RentalClassesController ::class, ['except' => ['show']]);
     require __DIR__.'/admin.php';
 });

@@ -391,6 +391,12 @@ return [
             'icon' => 'fas fa-shopping-cart',
             'active' => ['admin/product_categories/*'],
         ],
+        [
+            'text' => 'レンタルクラスー一覧',
+            'route'  => 'admin.rental_classes.index',
+            'icon' => 'fas fa-shopping-cart',
+            'active' => ['admin/rental_classes/*'],
+        ],
     ],
 
     /*

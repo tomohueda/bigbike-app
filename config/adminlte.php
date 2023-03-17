@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/admin/dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -290,6 +290,7 @@ return [
     */
 
     'menu' => [
+        /*
         // Navbar items:
         [
             'type'         => 'navbar-search',
@@ -383,6 +384,7 @@ return [
             'icon_color' => 'cyan',
             'url'        => '#',
         ],
+        */
         [
             'text' => 'カテゴリー一覧',
             'route'  => 'admin.product_categories.index',

@@ -16,7 +16,9 @@ class ProductCategoriesController extends Controller
     public function index()
     {
         //カテゴリー一覧
-        $categories = ProductCategory::all();
+        //$categories = ProductCategory::all();
+        // ページネーション
+        $categories = ProductCategory::paginate(5);
 
         return view (
             'product.category.index',

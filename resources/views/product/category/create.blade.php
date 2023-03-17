@@ -26,20 +26,17 @@
                 {{-- カテゴリー名入力 --}}
                 <div class="form-group">
                     <label for="name">カテゴリー名</label>
-                    <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}"
-                        placeholder="カテゴリー名" />
+                    <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" placeholder="カテゴリー名" />
                 </div>
                 {{-- カテゴリー詳細入力 --}}
                 <div class="form-group">
                     <label for="detail">カテゴリー詳細</label>
-                    <input type="text" class="form-control" id="detail" name="detail" value="{{ old('detail') }}"
-                        placeholder="詳細" />
+                    <input type="text" class="form-control" id="detail" name="detail" value="{{ old('detail') }}" placeholder="詳細" />
                 </div>
                 {{-- カテゴリー順番入力 --}}
                 <div class="form-group">
                     <label for="order">カテゴリー順番</label>
-                    <input type="number" class="form-control" id="order" name="order" value="{{ old('order') }}"
-                        placeholder="0" />
+                    <input type="number" class="form-control" id="order" name="order" value="{{ old('order') }}" placeholder="0" />
                 </div>
             </div>
             <div class="card-footer">

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Products\ProductCategory;
 use App\Models\Products\RentalClass;
+use App\Models\Products\Image;
+use App\Models\Products\ProductImage;
 
 class Product extends Model
 {
@@ -33,5 +35,10 @@ class Product extends Model
     // レンタルクラス取得
     public function rentalClass() {
         return $this->belongsTo(RentalClass::class, 'class_id');
+    }
+
+    // 画像の取得
+    public function images() {
+        return $this->belongsToMany(Image::class, 'product_images')->using(ProductImage::class);
     }
 }

@@ -28,6 +28,16 @@ class ProductRequest extends FormRequest
             'detail' => 'string|max:2048',
             'spec' => 'string|max:2048',
             'order' => 'integer|between:0,1000',
+
+            // 投稿された商品画像
+            'images' => 'array|max:4',
+            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
+    }
+
+    // 投稿された商品画像
+    public function images(): array
+    {
+        return $this->file('images', []);
     }
 }

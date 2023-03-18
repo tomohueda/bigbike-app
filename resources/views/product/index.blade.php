@@ -25,6 +25,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>商品名</th>
                         <th>商品カテゴリー</th>
                         <th>レンタルクラス</th>
@@ -35,6 +36,7 @@
                 <tbody>
                     @foreach ($products as $product)
                         <tr>
+                            <td>{{ $product->id }}</td>
                             <td>{{ $product->name }}</td>
                             <td>{{ $product->productCategory->name }}</td>
                             <td>{{ $product->rentalClass->name }}</td>

@@ -20,7 +20,7 @@
 
     {{-- 登録画面 --}}
     <div class="card">
-        <form action="{{ route('admin.product.store') }}" method="post">
+        <form action="{{ route('admin.product.store') }}" method="post"  enctype="multipart/form-data">
             @csrf
             <div class="card-body">
                 {{-- 商品名 --}}
@@ -45,7 +45,7 @@
                 </div>
                 {{-- カテゴリー --}}
                 <div class="form-group">
-                    <label for="order">カテゴリー</label>
+                    <label for="category_id">カテゴリー</label>
                     <select class="form-control" id="category_id" name="category_id">
                         @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -54,7 +54,7 @@
                 </div>
                 {{-- クラス --}}
                 <div class="form-group">
-                    <label for="order">クラス</label>
+                    <label for="class_id">クラス</label>
                     <select class="form-control" id="class_id" name="class_id">
                         @foreach ($classes as $class)
                         <option value="{{ $class->id }}">{{ $class->name }}</option>
@@ -67,7 +67,10 @@
                     <input type="number" class="form-control" id="order" name="order" value="{{ old('order') }}"
                         placeholder="0" />
                 </div>
+                {{-- 画像の登録 --}}
+                @include('product.form.images')
             </div>
+            
             <div class="card-footer">
                 <div class="row">
                     <a class="btn btn-default" href="{{ route('admin.product.index') }}" role="button">戻る</a>

@@ -5,6 +5,8 @@ use App\Models\Products\Product;
 use App\Models\Products\ProductCategory;
 use App\Models\Products\RentalClass;
 use App\Http\Requests\Prouct\ProductRequest;
+use App\Models\Products\Image;
+use Illuminate\Support\Facades\Storage;
 
 class ProductService
 {
@@ -13,6 +15,19 @@ class ProductService
     {
         $product = new Product;
         $product->fill($request->all())->save();
+
+        // 画像保存処理
+        $images = $request->images();
+        if (!empty($images)) {
+            foreach ($images as $image) {
+                Storage::putFile('public/images', $image);
+                $imageModel = new Image();
+                $imageModel->name = $image->hashName();
+                $imageModel->save();
+                $product->images()->attach($imageModel->id);
+            }
+        }
+
     }
 
     //全件取得（ページネーションあり）
@@ -40,7 +55,19 @@ class ProductService
     //削除
     public static function deleteProduct(string $id)
     {
-        Product::where('id', $id)->delete();
+        $product = Product::where('id', $id)->firstOrFail();
+        
+        $product->images()->each(function ($image) use ($product){
+            // 画像削除処理
+            $filePath = 'public/images/' . $image->name;
+            if(Storage::exists($filePath)){
+                Storage::delete($filePath);
+            }
+            $product->images()->detach($image->id);
+            $image->delete();
+        });
+
+        $product->delete();
     }
 
     //カテゴリー取得

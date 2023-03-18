@@ -4,10 +4,8 @@ namespace App\Http\Controllers\Products;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\Prouct\ProductRequest;
-
-use App\Models\Products\Product;
 use App\Services\ProductService;
+use App\Http\Requests\Prouct\ProductRequest;
 
 /* プロダクト コントローラ */
 class ProductsController extends Controller
@@ -48,8 +46,7 @@ class ProductsController extends Controller
     public function store(ProductRequest $request)
     {
         //
-        $product = new Product;
-        $product->fill($request->all())->save();
+        ProductService::createProduct($request);
 
         // 一覧へ戻り完了メッセージを表示
         return redirect()->route('admin.product.index')->with('message', '登録しました');
@@ -92,8 +89,7 @@ class ProductsController extends Controller
     public function update(ProductRequest $request, string $id)
     {
         //
-        $product = ProductService::getProduct($id);
-        $product->fill($request->all())->save();
+        ProductService::updateProduct($request, $id);
 
         // 一覧へ戻り完了メッセージを表示
         return redirect()->route('admin.product.index')->with('message', '編集しました');
@@ -106,7 +102,7 @@ class ProductsController extends Controller
     public function destroy(string $id)
     {
         //
-        Product::where('id', $id)->delete();
+        ProductService::deleteProduct($id);
         // 完了メッセージを表示
         return redirect()->route('admin.product.index')->with('message', '削除しました');
 

@@ -20,7 +20,7 @@
 
     {{-- 登録画面 --}}
     <div class="card">
-        <form action="{{ route('admin.product.store') }}" method="post"  enctype="multipart/form-data">
+        <form action="{{ route('admin.product.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
                 {{-- 商品名 --}}
@@ -64,7 +64,7 @@
                 {{-- 順番 --}}
                 <div class="form-group">
                     <label for="order">順番</label>
-                    <input type="number" class="form-control" id="order" name="order" value="{{ old('order') }}"
+                    <input type="number" class="form-control" id="order" name="order" value="0"
                         placeholder="0" />
                 </div>
                 {{-- 画像の登録 --}}

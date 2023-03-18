@@ -50,6 +50,27 @@ class ProductService
     {
         $product = Product::find($id);
         $product->fill($request->all())->save();
+
+        // 画像保存処理
+        $images = $request->images();
+        if (!empty($images)) {
+            // 画像を削除して保存しなおします。
+            $product->images()->each(function ($image) use ($product){
+                $filePath = 'public/images/' . $image->name;
+                if(Storage::exists($filePath)){
+                    Storage::delete($filePath);
+                }
+                $product->images()->detach($image->id);
+                $image->delete();
+            });
+            foreach ($images as $image) {
+                Storage::putFile('public/images', $image);
+                $imageModel = new Image();
+                $imageModel->name = $image->hashName();
+                $imageModel->save();
+                $product->images()->attach($imageModel->id);
+            }
+        }
     }
 
     //削除

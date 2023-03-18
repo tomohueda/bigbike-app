@@ -3,7 +3,7 @@
 @section('title', '商品編集')
 
 @section('content_header')
-    <h1>商品編集</h1>
+    <h1>商品編集  (ID:{{ $product->id }})</h1>
 @stop
 
 @section('content')
@@ -20,7 +20,7 @@
 
     {{-- 編集画面 --}}
     <div class="card">
-        <form action="{{ route('admin.product.update', $product->id) }}" method="post">
+        <form action="{{ route('admin.product.update', $product->id) }}" method="post" enctype="multipart/form-data">
             @csrf @method('PUT')
             <div class="card-body">
             {{-- 商品名 --}}
@@ -66,12 +66,30 @@
                     <label for="order">順番</label>
                     <input type="number" class="form-control" id="order" name="order" value="{{ old('order', $product->order) }}" placeholder="0" />
                 </div>
+                {{-- 画像の登録 --}}
+                @include('product.form.images')
+                <div class="alert alert-secondary" role="alert">
+                    画像を差し替える場合は再登録してください。既存の画像は削除されます。
+                </div>
+                @if(count($product->images) > 0)
+                                <div class="d-flex flex-row bd-highlight mb-3">
+                                @foreach($product->images as $image)
+                                    <div class="p-2 bd-highlight" style="width:400px">
+                                        画像{{$loop->index + 1}}
+                                        <img class="img-thumbnail" alt="{{ $image->name }}" class="object-fit w-full" src="{{ asset('storage/images/' . $image->name) }}">
+                                    </div>
+                                @endforeach
+                                </div>
+
+                @endif
+                
+
             </div>
             <div class="card-footer">
                 <div class="row">
                     <a class="btn btn-default" href="{{ route('admin.product.index') }}" role="button">戻る</a>
                     <div class="ml-auto">
-                        <button type="submit" class="btn btn-primary">編集</button>
+                        <button type="submit" class="btn btn-primary">更新</button>
                     </div>
                 </div>
             </div>

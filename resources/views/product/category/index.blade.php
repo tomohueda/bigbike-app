@@ -25,6 +25,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>カテゴリー名</th>
                         <th>説明</th>
                         <th>順番</th>
@@ -34,6 +35,7 @@
                 <tbody>
                     @foreach ($categories as $category)
                         <tr>
+                            <td>{{ $category->id }}</td>
                             <td>{{ $category->name }}</td>
                             {{-- 説明 --}}
                             <td>{{ $category->detail }}</td>

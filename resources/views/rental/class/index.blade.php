@@ -25,6 +25,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>レンタルクラス名</th>
                         <th>説明</th>
                         <th>順番</th>
@@ -34,6 +35,7 @@
                 <tbody>
                     @foreach ($classes as $class)
                         <tr>
+                            <td>{{ $class->id }}</td>
                             <td>{{ $class->name }}</td>
                             {{-- 説明 --}}
                             <td>{!! $class->detail !!}</td>

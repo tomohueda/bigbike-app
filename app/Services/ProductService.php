@@ -38,10 +38,10 @@ class ProductService
         return $products;
     }
 
-    //1件取
+    //1件取得
     public static function getProduct(string $id)
     {
-        $product = Product::find($id);
+        $product = Product::with('images')->find($id);
         return $product;
     }
 

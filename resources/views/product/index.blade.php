@@ -27,6 +27,7 @@
                     <tr>
                         <th>ID</th>
                         <th>商品名</th>
+                        <th>商品画像</th>
                         <th>商品カテゴリー</th>
                         <th>レンタルクラス</th>
                         <th>順番</th>
@@ -38,6 +39,17 @@
                         <tr>
                             <td>{{ $product->id }}</td>
                             <td>{{ $product->name }}</td>
+                            <td>
+                            @if(count($product->images) > 0)
+                                <div class="d-flex flex-row bd-highlight mb-3">
+                                @foreach($product->images as $image)
+                                    <div class="p-2 bd-highlight" style="width:100px">
+                                        <img class="img-thumbnail" alt="{{ $image->name }}" class="object-fit w-full" src="{{ asset('storage/images/' . $image->name) }}">
+                                    </div>
+                                @endforeach
+                                </div>
+                            @endif
+                            </td>
                             <td>{{ $product->productCategory->name }}</td>
                             <td>{{ $product->rentalClass->name }}</td>
                             <td>{{ $product->order }}</td>

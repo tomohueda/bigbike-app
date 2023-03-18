@@ -36,7 +36,7 @@
                         <tr>
                             <td>{{ $class->name }}</td>
                             {{-- 説明 --}}
-                            <td>{{ $class->detail }}</td>
+                            <td>{!! $class->detail !!}</td>
                             {{-- 順番 --}}
                             <td>{{ $class->order }}</td>
                             <td>

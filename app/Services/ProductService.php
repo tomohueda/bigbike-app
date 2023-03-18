@@ -105,4 +105,21 @@ class ProductService
         return $classes;
     }
 
+    // 特定のカテゴリーの商品一覧を取得する（category_id 指定）
+    public static function getProductsWithCategoryId(string $id)
+    {
+        $products = ProductCategory::find($id)->products()->orderBy('order', 'asc')->get();
+        return $products;
+    }
+
+    // 特定のカテゴリーの商品一覧を取得する（order 指定）
+    public static function getProductsWithCategoryOrder(int $order)
+    {
+        if(!ProductCategory::where('order', '=', $order)->get()->isNotEmpty()){
+            return null;
+        }
+        $products = ProductCategory::where('order', '=', $order)->first()->products()->orderBy('order', 'asc')->get();
+        return $products;
+    }
+
 }

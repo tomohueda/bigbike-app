@@ -23,7 +23,7 @@ class ProductCategory extends Model
 
     // 関連商品の取得
     public function products() {
-        return $this->hasMany(Product::class)->orderBy('order', 'asc');
+        return $this->hasMany(Product::class, 'category_id');
     }
 }
 

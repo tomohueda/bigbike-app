@@ -38,7 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+//ユーザーログイン・登録は使用しない
+//require __DIR__.'/auth.php';
 
 //Admin用ルーティング
 Route::prefix('admin')->name('admin.')->group(function(){

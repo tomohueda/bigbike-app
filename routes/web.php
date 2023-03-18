@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AboutPageController;
 
+use App\Http\Controllers\TopPageController;
 //商品マスタ用
 use App\Http\Controllers\Products\ProductCategoriesController;
 use App\Http\Controllers\Products\RentalClassesController;
@@ -22,9 +23,7 @@ use App\Http\Controllers\Products\ProductsController;
 |
 */
 
-Route::get('/', function () {
-    return view('top');
-});
+Route::get('/', [TopPageController::class, 'show'])->name('top');
 
 Route::get('/about', [AboutPageController::class, 'show'])->name('about');
 

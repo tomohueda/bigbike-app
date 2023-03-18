@@ -4,11 +4,10 @@ namespace App\Http\Controllers\Products;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Products\Product;
 use App\Http\Requests\Prouct\ProductRequest;
 
-use App\Models\Products\ProductCategory;
-use App\Models\Products\RentalClass;
+use App\Models\Products\Product;
+use App\Services\ProductService;
 
 /* プロダクト コントローラ */
 class ProductsController extends Controller
@@ -18,14 +17,10 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        // 全件取得
-        $products = Product::with('productCategory')->with('rentalClass')->orderBy('order', 'asc')->paginate(10);
-        $categories = ProductCategory::orderBy('order', 'asc');
-        $classes = RentalClass::orderBy('order', 'asc');
-
-        foreach ($products as $product){
-            $product;
-        }
+        // 全商品取得
+        $products = ProductService::getProducts(10);
+        $categories = ProductService::getProductCategories();
+        $classes = ProductService::getRentalClasses();
 
         return view (
             'product.index',
@@ -39,8 +34,8 @@ class ProductsController extends Controller
     public function create()
     {
         //
-        $categories = ProductCategory::orderBy('order', 'asc')->get();
-        $classes = RentalClass::orderBy('order', 'asc')->get();
+        $categories = ProductService::getProductCategories();
+        $classes = ProductService::getRentalClasses();
         return view (
             'product.create',
             ['categories' => $categories, 'classes' => $classes]
@@ -67,11 +62,9 @@ class ProductsController extends Controller
     public function show(string $category_id)
     {
         //特定のカテゴリーのデータを取得
-        //$category = ProductCategory::find($category_id);
-        //$products = $category->products();]
-        $products = Product::where('category_id', $category_id)->orderBy('order', 'asc')->paginate(10);
-        $categories = ProductCategory::orderBy('order', 'asc')->get();
-        $classes = RentalClass::orderBy('order', 'asc')->get();
+        $products = ProductService::getProducts(10);
+        $categories = ProductService::getProductCategories();
+        $classes = ProductService::getRentalClasses();
         return view (
             'product.index',
             ['products' => $products, 'categories' => $categories, 'classes' => $classes]
@@ -84,9 +77,9 @@ class ProductsController extends Controller
     public function edit(string $id)
     {
         //
-        $product = Product::find($id);
-        $categories = ProductCategory::orderBy('order', 'asc')->get();
-        $classes = RentalClass::orderBy('order', 'asc')->get();
+        $product = ProductService::getProduct($id);
+        $categories = ProductService::getProductCategories();
+        $classes = ProductService::getRentalClasses();
         return view (
             'product.edit',
             ['product' => $product, 'categories' => $categories, 'classes' => $classes]
@@ -99,7 +92,7 @@ class ProductsController extends Controller
     public function update(ProductRequest $request, string $id)
     {
         //
-        $product = Product::find($id);
+        $product = ProductService::getProduct($id);
         $product->fill($request->all())->save();
 
         // 一覧へ戻り完了メッセージを表示

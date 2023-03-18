@@ -30,6 +30,7 @@
                         <th>商品画像</th>
                         <th>商品カテゴリー</th>
                         <th>レンタルクラス</th>
+                        <th>リンクURL</th>
                         <th>順番</th>
                         <th style="width: 70px"></th>
                     </tr>
@@ -52,6 +53,7 @@
                             </td>
                             <td>{{ $product->productCategory->name }}</td>
                             <td>{{ $product->rentalClass->name }}</td>
+                            <td><a href="{{ $product->url }}" class="link-primary" target="_blank">{{ $product->url }}</a></td>
                             <td>{{ $product->order }}</td>
                             <td>
                                 <a class="btn btn-primary btn-sm mb-2" href="{{ route('admin.product.edit', $product->id) }}"

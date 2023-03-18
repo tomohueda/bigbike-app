@@ -27,6 +27,7 @@ class ProductRequest extends FormRequest
             'copy' => 'string|max:64',
             'detail' => 'string|max:2048',
             'spec' => 'string|max:2048',
+            'url' => 'string|max:256',
             'order' => 'integer|between:0,1000',
 
             // 投稿された商品画像

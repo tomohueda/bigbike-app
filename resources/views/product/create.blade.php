@@ -43,6 +43,11 @@
                     <label for="spec">スペック</label>
                     <textarea class="form-control" id="spec" name="spec" value="{{ old('spec') }}" placeholder="スペック" /></textarea>
                 </div>
+                {{-- URL --}}
+                <div class="form-group">
+                    <label for="name">リンクURL</label>
+                    <input type="text" class="form-control" id="url" name="url" value="{{ old('url') }}" placeholder="リンクURL" />
+                </div>
                 {{-- カテゴリー --}}
                 <div class="form-group">
                     <label for="category_id">カテゴリー</label>

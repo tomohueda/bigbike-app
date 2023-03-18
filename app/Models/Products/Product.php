@@ -22,6 +22,7 @@ class Product extends Model
         'copy',
         'detail',
         'spec',
+        'url',
         'order',
         'category_id',
         'class_id',

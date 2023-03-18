@@ -23,7 +23,7 @@
         <form action="{{ route('admin.product.update', $product->id) }}" method="post" enctype="multipart/form-data">
             @csrf @method('PUT')
             <div class="card-body">
-            {{-- 商品名 --}}
+                {{-- 商品名 --}}
                 <div class="form-group">
                     <label for="name">商品名</label>
                     <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $product->name) }}" placeholder="商品名" />
@@ -42,6 +42,11 @@
                 <div class="form-group">
                     <label for="spec">スペック</label>
                     <textarea class="form-control" id="spec" name="spec" placeholder="詳細説明" />{{ old('spec', $product->spec) }}</textarea>
+                </div>
+                {{-- リンクURL --}}
+                <div class="form-group">
+                    <label for="name">商品名</label>
+                    <input type="text" class="form-control" id="url" name="url" value="{{ old('url', $product->url) }}" placeholder="リンクURL" />
                 </div>
                 {{-- カテゴリー --}}
                 <div class="form-group">

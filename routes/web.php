@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AboutPageController;
+
 //商品マスタ用
 use App\Http\Controllers\Products\ProductCategoriesController;
 use App\Http\Controllers\Products\RentalClassesController;
@@ -23,6 +25,8 @@ use App\Http\Controllers\Products\ProductsController;
 Route::get('/', function () {
     return view('top');
 });
+
+Route::get('/about', [AboutPageController::class, 'show'])->name('about');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

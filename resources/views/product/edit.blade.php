@@ -31,7 +31,7 @@
                 {{-- サブタイトル --}}
                 <div class="form-group">
                     <label for="copy">サブタイトル</label>
-                    <input type="text" class="form-control" id="copy" name="copy" value="{{ old('copy', $product->name) }}" placeholder="サブタイトル" />
+                    <input type="text" class="form-control" id="copy" name="copy" value="{{ old('copy', $product->copy) }}" placeholder="サブタイトル" />
                 </div>
                 {{-- 詳細説明 --}}
                 <div class="form-group">

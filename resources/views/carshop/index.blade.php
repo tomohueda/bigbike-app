@@ -4,6 +4,6 @@
 
 @include("carshop.hero")
 
-@include("carshop.home_contents")
+@include("carshop.home")
 
 @include("carshop.common.footer")

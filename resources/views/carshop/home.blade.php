@@ -61,6 +61,8 @@
 			<!-- .row end -->
 		</div>
 		<!-- .container end -->
+
+		<!--RV rental-->
 		<div class="container heading">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12">
@@ -101,7 +103,7 @@
 						</div>
 						<!-- .product-title end -->
 						<div class="product-price">
-							<span class="symbole">$</span><span>{{$product->rentalClass->day_price}}</span>
+							<span class="symbole"></span><span>{{$product->rentalClass->day_price}}</span>
 						</div>
 						<!-- .product-price end -->
 						
@@ -115,6 +117,64 @@
 			</div>
 			<!-- .row end -->
 		</div>
+
+		<!--BIKE rental-->
+		<div class="container heading">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<p class="subheading">{{$categories[1]->name}}</p>
+					<h2>{{$categories[1]->detail}}</h2>
+				</div>
+				<!-- .col-md-12 end -->
+			</div>
+			<!-- .row end -->
+		</div>
+		<!-- .container end -->
+		<div class="container">
+			<div class="row product-carousel text-center">
+
+			@foreach ($products_1 as $product)
+
+				<!-- Product #1 -->
+				<div class="product">
+					<div class="product-img">
+						<img class="product-img" alt="{{$product->name}}" src="{{ asset('storage/images/' . $product->images[0]->name) }}">
+						<div class="product-hover">
+							<div class="product-action">
+								<a class="btn btn-primary" href="{{route('product.show', $product->id)}}">View Details</a>
+							</div>
+						</div>
+						<!-- .product-overlay end -->
+					</div>
+					<!-- .product-img end -->
+					<div class="product-bio">
+						<div class="prodcut-cat">
+							<a href="{{route('product.show', $product->id)}}">{{$product->copy}}</a>
+						</div>
+						<!-- .product-cat end -->
+						<div class="prodcut-title">
+							<h3>
+								<a href="{{route('product.show', $product->id)}}">{{$product->name}}</a>
+							</h3>
+						</div>
+						<!-- .product-title end -->
+						<div class="product-price">
+							<span class="symbole"></span><span>{{$product->rentalClass->day_price}}</span>
+						</div>
+						<!-- .product-price end -->
+						
+					</div>
+					<!-- .product-bio end -->
+				</div>
+				<!-- .product end -->
+				
+				@endforeach
+
+			</div>
+			<!-- .row end -->
+		</div>
+
 		<!-- .container end -->
 	</section>
 	<!-- #featuredItems end -->
+

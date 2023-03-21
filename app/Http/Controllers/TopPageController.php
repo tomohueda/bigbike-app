@@ -12,8 +12,8 @@ use App\Services\ProductService;
 class TopPageController extends Controller {
 
     public function show(){
-
-        $products_0 = ProductService::getProductsWithCategoryOrder(0);
+        $products_0 = ProductService::getProductsWithCategoryOrder(0);  //RV rental
+        $products_1 = ProductService::getProductsWithCategoryOrder(1);  //BIKE rental
         $categories = ProductService::getProductCategories();
         $classes = ProductService::getRentalClasses();
         return view (
@@ -21,6 +21,7 @@ class TopPageController extends Controller {
             'carshop',
             [
                 'products_0' => $products_0,
+                'products_1' => $products_1,
                 'categories' => $categories,
                 'classes' => $classes,
             ]

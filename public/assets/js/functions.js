@@ -276,8 +276,8 @@
         speed: 600,
         autoplay: false,
         autoplaySpeed: 2000,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         variableWidth: false,
         arrows: false,
         responsive: [{

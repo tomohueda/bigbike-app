@@ -99,7 +99,7 @@
 						<!-- Tab panes -->
 						<div class="tab-content">
 							<div role="tabpanel" class="tab-pane active" id="description">
-							{{$product->rentalClass->detail}}
+							{!!$product->rentalClass->detail!!}
 							</div>
 						</div>
 						<!-- #tab-content end -->

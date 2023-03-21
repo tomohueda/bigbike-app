@@ -70,7 +70,6 @@
 				<!-- .col-md-12 end -->
 			</div>
 			<!-- .row end -->
-			
 		</div>
 		<!-- .container end -->
 		<div class="container">
@@ -102,7 +101,7 @@
 						</div>
 						<!-- .product-title end -->
 						<div class="product-price">
-							<span class="symbole">$</span><span>28.00</span>
+							<span class="symbole">$</span><span>{{$product->rentalClass->day_price}}</span>
 						</div>
 						<!-- .product-price end -->
 						

@@ -26,6 +26,8 @@ class RentalClassRequest extends FormRequest
             'name' => 'required|string|max:64',
             // 詳細
             'detail' => 'string|max:2048',
+            // 価格
+            'day_price' => 'string|max:2048',
             //順番
             'order' => 'integer|between:0,1000',
         ];

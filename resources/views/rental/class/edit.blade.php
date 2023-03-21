@@ -34,6 +34,12 @@
                     <label for="detail">説明</label>
                     <textarea class="form-control" id="detail" name="detail" />{{ old('detail', $class->detail) }}</textarea>
                 </div>
+                {{-- １日のレンタル価格入力 --}}
+                <div class="form-group">
+                    <label for="name">１日のレンタル価格</label>
+                    <input type="text" class="form-control" id="day_price" name="day_price"
+                        value="{{ old('name', $class->day_price) }}" placeholder="１日のレンタル価格" />
+                </div>
                 {{-- 順番入力 --}}
                 <div class="form-group">
                     <label for="order">説明</label>

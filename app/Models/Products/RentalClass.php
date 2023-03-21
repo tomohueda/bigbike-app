@@ -17,6 +17,7 @@ class RentalClass extends Model
     protected $fillable = [
         'name',
         'detail',
+        'day_price',
         'order',
     ];
 

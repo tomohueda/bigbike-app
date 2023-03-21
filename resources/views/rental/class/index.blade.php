@@ -28,6 +28,7 @@
                         <th>ID</th>
                         <th>レンタルクラス名</th>
                         <th>説明</th>
+                        <th>1日の価格</th>
                         <th>順番</th>
                         <th style="width: 70px"></th>
                     </tr>
@@ -39,6 +40,7 @@
                             <td>{{ $class->name }}</td>
                             {{-- 説明 --}}
                             <td>{!! $class->detail !!}</td>
+                            <td>{{ $class->day_price }}</td>
                             {{-- 順番 --}}
                             <td>{{ $class->order }}</td>
                             <td>

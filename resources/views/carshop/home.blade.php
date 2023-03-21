@@ -92,12 +92,12 @@
 					<!-- .product-img end -->
 					<div class="product-bio">
 						<div class="prodcut-cat">
-							<a href="#">{{$product->copy}}</a>
+							<a href="{{route('product.show', $product->id)}}">{{$product->copy}}</a>
 						</div>
 						<!-- .product-cat end -->
 						<div class="prodcut-title">
 							<h3>
-								<a href="#">{{$product->name}}</a>
+								<a href="{{route('product.show', $product->id)}}">{{$product->name}}</a>
 							</h3>
 						</div>
 						<!-- .product-title end -->

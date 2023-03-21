@@ -78,6 +78,11 @@
 						<h5>Other Details :</h5>
 						{!!$product->detail!!}
 					</div>
+					<hr class="mt-15 mb-15">
+					<div class="product-details text-center-xs">
+						<h5>Specification :</h5>
+						{!!$product->spec!!}
+					</div>
 					<!-- .product-detail end -->
 
 							

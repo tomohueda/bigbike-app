@@ -72,9 +72,9 @@
 						{!!$product->detail!!}
 					</div>
 					<!-- .product-detail end -->
-					<!--
+					
 					<hr class="mt-30 mb-30">
-					<div class="product-share  text-center-xs">
+					<!--<div class="product-share  text-center-xs">
 						<h5 class="share-title">share product: </h5>
 						<a class="share-facebook" href="#"><i class="fa fa-facebook"></i></a>
 						<a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
@@ -83,6 +83,10 @@
 						<a class="share-dribbble" href="#"><i class="fa fa-dribbble"></i></a>
 					</div>-->
 					<!-- .product-share end -->
+					<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+					<a class="btn btn-primary" href="{{$product->url}}" target="_blank">Request for a quote</a>
+					<p>Go to our partner site.</p>
+					</div>
 				</div>
 			</div>
 			<!-- .row end -->
@@ -126,6 +130,7 @@
 			</div>
 
 		</div>
+
 		<!-- .container end -->
 	</section>
 	<!-- #blog end -->

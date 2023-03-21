@@ -3257,7 +3257,7 @@ li.dropdown-submenu.pull-left > ul.dropdown-menu {
 }
 
 .hero .slide.bg-overlay:before {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .hero .slide-content {

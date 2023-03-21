@@ -14,10 +14,16 @@ class TopPageController extends Controller {
     public function show(){
 
         $products_0 = ProductService::getProductsWithCategoryOrder(0);
-
+        $categories = ProductService::getProductCategories();
+        $classes = ProductService::getRentalClasses();
         return view (
-            'top',
-            ['products_0' => $products_0,]
+            //'top',
+            'carshop',
+            [
+                'products_0' => $products_0,
+                'categories' => $categories,
+                'classes' => $classes,
+            ]
         );
     }
 	

@@ -121,5 +121,5 @@ class ProductService
         $products = ProductCategory::where('order', '=', $order)->first()->products()->orderBy('order', 'asc')->get();
         return $products;
     }
-
+    
 }

@@ -38,8 +38,8 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a class="logo" href="index.html">
-					<img src="assets/images/logo/logo-light.png" alt="Autoshop">
+					<a class="logo" href="{{route('top')}}">
+					<img src="{{asset('assets/images/logo/logo-light.png')}}" alt="Autoshop">
 					</a>
 				</div>
 				

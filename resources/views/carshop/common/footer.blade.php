@@ -139,12 +139,12 @@
 					<div class="col-xs-12 col-sm-6 col-md-6">
 						<div class="payment-methods text-right">
 							<ul class="list-inline mb-0">
-								<li><img src="assets/images/footer/visa.png" alt="payment"></li>
-								<li><img src="assets/images/footer/mastercard.png" alt="payment"></li>
-								<li><img src="assets/images/footer/american-express.png" alt="payment"></li>
-								<li><img src="assets/images/footer/delta.png" alt="payment"></li>
-								<li><img src="assets/images/footer/cirrus.png" alt="payment"></li>
-								<li><img src="assets/images/footer/paypal.png" alt="payment"></li>
+								<li><img src="{{asset('assets/images/footer/visa.png')}}" alt="payment"></li>
+								<li><img src="{{asset('assets/images/footer/mastercard.png')}}" alt="payment"></li>
+								<li><img src="{{asset('assets/images/footer/american-express.png')}}" alt="payment"></li>
+								<li><img src="{{asset('assets/images/footer/delta.png')}}" alt="payment"></li>
+								<li><img src="{{asset('assets/images/footer/cirrus.png')}}" alt="payment"></li>
+								<li><img src="{{asset('assets/images/footer/paypal.png')}}" alt="payment"></li>
 							</ul>
 						</div>
 					</div>
@@ -159,8 +159,8 @@
 
 <!-- Footer Scripts
 ============================================= -->
-<script src="assets/js/jquery-2.2.4.min.js"></script>
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/functions.js"></script>
+<script src="{{asset('assets/js/jquery-2.2.4.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins.js')}}"></script>
+<script src="{{asset('assets/js/functions.js')}}"></script>
 </body>
 </html>

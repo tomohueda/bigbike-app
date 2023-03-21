@@ -5321,8 +5321,10 @@ td.cart-product-quantity {
 }
 
 .shop-single .product-img-nav img {
-	width: auto !important;
-	height: auto;
+	/*width: auto !important;*/
+	width: 70px;
+	/*height: auto;*/
+	height: auto !important;;
 	margin: 0 10px;
 }
 

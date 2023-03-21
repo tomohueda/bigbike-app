@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutPageController;
 
 use App\Http\Controllers\TopPageController;
+use App\Http\Controllers\ProductController;
+
 //商品マスタ用
 use App\Http\Controllers\Products\ProductCategoriesController;
 use App\Http\Controllers\Products\RentalClassesController;
@@ -25,7 +27,10 @@ use App\Http\Controllers\Products\ProductsController;
 
 Route::get('/', [TopPageController::class, 'show'])->name('top');
 
-Route::get('/about', [AboutPageController::class, 'show'])->name('about');
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+
+
+//Route::get('/about', [AboutPageController::class, 'show'])->name('about');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

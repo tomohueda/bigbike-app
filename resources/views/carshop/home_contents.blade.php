@@ -81,10 +81,10 @@
 				<!-- Product #1 -->
 				<div class="product">
 					<div class="product-img">
-						<img class="product-img" alt="{{ $product->images[0]->name }}" src="{{ asset('storage/images/' . $product->images[0]->name) }}">
+						<img class="product-img" alt="{{$product->name}}" src="{{ asset('storage/images/' . $product->images[0]->name) }}">
 						<div class="product-hover">
 							<div class="product-action">
-								<a class="btn btn-primary" href="#">View Details</a>
+								<a class="btn btn-primary" href="{{route('product.show', $product->id)}}">View Details</a>
 							</div>
 						</div>
 						<!-- .product-overlay end -->

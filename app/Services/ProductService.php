@@ -41,7 +41,7 @@ class ProductService
     //1件取得
     public static function getProduct(string $id)
     {
-        $product = Product::with('images')->find($id);
+        $product = Product::with('images')->with('productCategory')->with('rentalClass')->find($id);
         return $product;
     }
 

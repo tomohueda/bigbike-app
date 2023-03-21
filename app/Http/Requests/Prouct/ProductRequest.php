@@ -26,7 +26,7 @@ class ProductRequest extends FormRequest
             'name' => 'required|string|max:64',
             'copy' => 'string|max:64',
             'detail' => 'string|max:2048',
-            'spec' => 'string|max:2048',
+            'spec' => 'string|max:4096',
             'url' => 'string|max:256',
             'order' => 'integer|between:0,1000',
 

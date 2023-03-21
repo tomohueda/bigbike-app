@@ -65,14 +65,23 @@
 						<p class="mb-0">{!!$product->copy!!}</p>
 					</div>
 					<!-- .product-desc end -->
-					
+
+					<div class="product-meta mb-30">
+						<div class="product-price pull-left pull-none-xs">
+							<p>{{$product->rentalClass->day_price}}</p>
+						</div>
+						<!-- .product-price end -->
+					</div>
+
 					<hr class="mt-30 mb-30">
 					<div class="product-details text-center-xs">
 						<h5>Other Details :</h5>
 						{!!$product->detail!!}
 					</div>
 					<!-- .product-detail end -->
-					
+
+							
+
 					<hr class="mt-30 mb-30">
 					<!--<div class="product-share  text-center-xs">
 						<h5 class="share-title">share product: </h5>

@@ -2,65 +2,21 @@
 ============================================= -->
 <section id="featuredItems" class="shop">
 		<div class="container">
-			<div class="row product-boxes">
-				<!-- Product Box #1 -->
-				<div class="col-xs-12 col-sm-4 col-md-4 product-box">
-					<a href="#">
-					<div class="product-img">
-						<img  src="assets/images/shop/small/1.jpg" alt="Product"/>
-						<div class="product-hover">
-							<div class="product-link">
-								<h3>Car Wheels</h3>
-								<p>Best Metal</p>
-							</div>
-						</div>
-						<!-- .product-overlay end -->
-					</div>
-					<!-- .product-img end -->
-					</a>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/62HtBkD95wo" title="Japanese RV Driving Experience"></iframe>
 				</div>
-				<!-- .product-box end -->
-				
-				<!-- Product Box #2 -->
-				<div class="col-xs-12 col-sm-4 col-md-4 product-box">
-					<a href="#">
-					<div class="product-img">
-						<img  src="assets/images/shop/small/3.jpg" alt="Product"/>
-						<div class="product-hover">
-							<div class="product-link">
-								<h3>Car Engines</h3>
-								<p>Best Prices</p>
-							</div>
-						</div>
-						<!-- .product-overlay end -->
-					</div>
-					<!-- .product-img end -->
-					</a>
-				</div>
-				<!-- .product-box end -->
-				
-				<!-- Product Box #3 -->
-				<div class="col-xs-12 col-sm-4 col-md-4 product-box">
-					<a href="#">
-					<div class="product-img">
-						<img  src="assets/images/shop/small/3.jpg" alt="Product"/>
-						<div class="product-hover">
-							<div class="product-link">
-								<h3>Car Batteries</h3>
-								<p>Best Quality</p>
-							</div>
-						</div>
-						<!-- .product-overlay end -->
-					</div>
-					<!-- .product-img end -->
-					</a>
-				</div>
-				<!-- .product-box end -->
-				
 			</div>
-			<!-- .row end -->
+			<div class="col-sm-6">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UCQYr8VAHbE" title="How to turn the RV Dinette into a Bed"></iframe>
+				</div>
+			</div>
+		</div>
 		</div>
 		<!-- .container end -->
+		<div class="m-md"></div>
 
 		<!--RV rental-->
 		<div class="container heading">

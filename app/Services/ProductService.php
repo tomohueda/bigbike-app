@@ -98,6 +98,13 @@ class ProductService
         return $categories;
     }
 
+    // 特定のカテゴリーを取得
+    public static function getProductCategory(string $id)
+    {
+        $category = ProductCategory::find($id);
+        return $category;
+    }
+    
     //レンタルクラス取得
     public static function getRentalClasses()
     {

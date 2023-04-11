@@ -8,6 +8,7 @@ use App\Http\Controllers\AboutPageController;
 
 use App\Http\Controllers\TopPageController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 //商品マスタ用
 use App\Http\Controllers\Products\ProductCategoriesController;
@@ -28,6 +29,8 @@ use App\Http\Controllers\Products\ProductsController;
 Route::get('/', [TopPageController::class, 'show'])->name('top');
 
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+
+Route::get('/category/{id}', [CategoryController::class, 'show'])->name('category.show');
 
 
 //Route::get('/about', [AboutPageController::class, 'show'])->name('about');

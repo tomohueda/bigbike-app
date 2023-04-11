@@ -34,7 +34,7 @@ class ProductService
     public static function getProducts(int $num)
     {
         // withの中はProductモデルに記述の関数名
-        $products = Product::with('images')->with('productCategory')->with('rentalClass')->orderBy('order', 'asc')->paginate($num);
+        $products = Product::with('images')->with('productCategory')->with('rentalClass')->orderBy('order', 'asc')->orderBy('category_id', 'asc')->orderBy('class_id', 'asc')->paginate($num);
         return $products;
     }
 

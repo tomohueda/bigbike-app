@@ -21,6 +21,7 @@
 		<!--RV rental-->
 
 		<div class="container heading">
+		<img  src="{{asset('/assets/img/rvcars.jpg')}}" alt="rvcars" width="100%" style="margin-bottom:20px;"/>
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12">
 					<p class="subheading">{{$categories[0]->name}}</p>
@@ -44,8 +45,9 @@
 		</div>
 		<!-- .container end -->
 		<div class="container">
+		
 			<div class="row product-carousel text-center">
-
+			
 			@foreach ($products_0 as $product)
 
 				<!-- Product #1 -->
@@ -90,6 +92,7 @@
 
 		<!--BIKE rental-->
 		<div class="container heading">
+		<img  src="{{asset('/assets/img/bikers.jpg')}}" alt="bikers" width="100%" style="margin-bottom:20px;"/>
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12">
 					<p class="subheading">{{$categories[1]->name}}</p>

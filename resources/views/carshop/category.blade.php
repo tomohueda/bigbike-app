@@ -6,14 +6,14 @@
 ============================================= -->
     <section id="page-title" class="page-title">
 		<div class="container">
-					@if($category->id == 0)
+					@if($category->id == 3)
 					<img  src="{{asset('/assets/img/rvcars.jpg')}}" alt="{{$category->name}}" width="100%" style="margin-bottom:20px;"/>
 					@elseif($category->id == 1)
 					<img  src="{{asset('/assets/img/bikers.jpg')}}" alt="{{$category->name}}" width="100%" style="margin-bottom:20px;"/>
 					@endif
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12">
-							<p class="subheading">{{$category->name}}</p>
+							<!--<p class="subheading">{{$category->name}}</p>-->
 							<h2>{{$category->detail}}</h2>
 						</div>
 						<!-- .col-md-12 end -->

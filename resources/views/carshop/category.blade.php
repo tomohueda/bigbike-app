@@ -6,12 +6,22 @@
 ============================================= -->
     <section id="page-title" class="page-title">
 		<div class="container">
-			<div class="row">
-
-				
-				<!-- .col-md-6 end -->
-			</div>
-			<!-- .row end -->
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<p class="subheading">{{$category->name}}</p>
+							<h2>{{$category->detail}}</h2>
+						</div>
+						<!-- .col-md-12 end -->
+					</div>
+					<!-- .row end -->
+					
+					<div class="row heading-desc" style="margin-top:-100px;">
+						<div class="col-xs-12 col-sm-12 col-md-10">
+							<p>{!!$category->description!!}</p>
+						</div>
+						<!-- .client end -->
+					</div>
+				<!-- .row end -->
 		</div>
 		<!-- .container end -->
 	</section>
@@ -19,15 +29,10 @@
 	
 	<!-- Shop Single right sidebar
 ============================================= -->
-	<section id="shopgrid" class="shop shop-grid">
+	<section id="shopgrid" class="shop shop-grid"  style="margin-top:-100px;">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-					<div class="product-num pull-left pull-none-xs">
-						<h3>{{$category->name}}</h3>
-					</div>
-					<!-- .product-num end -->
-				</div>
+
                 <div class="row">
                 @foreach ($products as $product)
                     <div class="col-xs-12 col-sm-6 col-md-3 product">

@@ -32,11 +32,11 @@
 			
 			<div class="row heading-desc">
 				<div class="col-xs-12 col-sm-12 col-md-10">
-					<p>Car Shop is a business theme. Perfectly suited for Auto Mechanic, Car Repair Shops, Car Wash, Garages, Automobile Mechanicals, Mechanic Workshops, Auto Painting, Auto Centres.</p>
+					<p>{!!$categories[0]->description!!}</p>
 				</div>
 				<!-- .col-md-10 end -->
 				<div class="col-xs-12 col-sm-12 col-md-2">
-					<a class="btn btn-primary" href="{{route('category.show', $categories[1]->id)}}">View All</a>
+					<a class="btn btn-primary" href="{{route('category.show', $categories[0]->id)}}">View All >></a>
 				</div>
 				<!-- .client end -->
 			</div>
@@ -96,6 +96,18 @@
 					<h2>{{$categories[1]->detail}}</h2>
 				</div>
 				<!-- .col-md-12 end -->
+			</div>
+			<!-- .row end -->
+			
+			<div class="row heading-desc">
+				<div class="col-xs-12 col-sm-12 col-md-10">
+					<p>{!!$categories[1]->description!!}</p>
+				</div>
+				<!-- .col-md-10 end -->
+				<div class="col-xs-12 col-sm-12 col-md-2">
+					<a class="btn btn-primary" href="{{route('category.show', $categories[1]->id)}}">View All >></a>
+				</div>
+				<!-- .client end -->
 			</div>
 			<!-- .row end -->
 		</div>

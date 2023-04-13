@@ -13,18 +13,6 @@
 				</div>
 				<!-- .col-md-6 end -->
 				
-				<div class="col-xs-12 col-sm-12 col-md-6">
-					<ol class="breadcrumb text-right">
-						<!--<li>
-							<a href="index.html">Home</a>
-						</li>
-						-->
-						<!--
-						<li class="active">{{$product->productCategory->name}}</li>
-						-->
-					</ol>
-				</div>
-				
 				<!-- .col-md-6 end -->
 			</div>
 			<!-- .row end -->
@@ -35,7 +23,7 @@
 	
 	<!-- Shop Single right sidebar
 ============================================= -->
-	<section id="shopgrid" class="shop shop-single">
+	<section id="shopgrid" class="shop shop-single" style="margin-top:-100px;">
 		<div class="container shop-content">
 
 			<!-- .row end -->

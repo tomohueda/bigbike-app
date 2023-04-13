@@ -6,6 +6,11 @@
 ============================================= -->
     <section id="page-title" class="page-title">
 		<div class="container">
+					@if($category->id == 0)
+					<img  src="{{asset('/assets/img/rvcars.jpg')}}" alt="{{$category->name}}" width="100%" style="margin-bottom:20px;"/>
+					@elseif($category->id == 1)
+					<img  src="{{asset('/assets/img/bikers.jpg')}}" alt="{{$category->name}}" width="100%" style="margin-bottom:20px;"/>
+					@endif
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12">
 							<p class="subheading">{{$category->name}}</p>
@@ -15,7 +20,7 @@
 					</div>
 					<!-- .row end -->
 					
-					<div class="row heading-desc" style="margin-top:-100px;">
+					<div class="row heading-desc">
 						<div class="col-xs-12 col-sm-12 col-md-10">
 							<p>{!!$category->description!!}</p>
 						</div>

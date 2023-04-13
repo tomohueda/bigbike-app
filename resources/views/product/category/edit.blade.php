@@ -28,10 +28,15 @@
                     <label for="name">カテゴリー名</label>
                     <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $category->name) }}" placeholder="カテゴリー名" />
                 </div>
-                {{-- 説明入力 --}}
+                {{-- カテゴリー詳細入力 --}}
                 <div class="form-group">
-                    <label for="detail">説明</label>
-                    <input type="text" class="form-control" id="detail" name="detail" value="{{ old('detail', $category->detail) }}" placeholder="説明" />
+                    <label for="detail">カテゴリー詳細</label>
+                    <input type="text" class="form-control" id="detail" name="detail" value="{{ old('detail', $category->detail) }}" placeholder="詳細" />
+                </div>
+                {{-- カテゴリー説明入力 --}}
+                <div class="form-group">
+                    <label for="detail">カテゴリー説明</label>
+                    <input type="text" class="form-control" id="description" name="description" value="{{ old('description', $category->description) }}" placeholder="説明" />
                 </div>
                 {{-- 順番入力 --}}
                 <div class="form-group">

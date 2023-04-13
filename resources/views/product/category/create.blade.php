@@ -33,6 +33,11 @@
                     <label for="detail">カテゴリー詳細</label>
                     <input type="text" class="form-control" id="detail" name="detail" value="{{ old('detail') }}" placeholder="詳細" />
                 </div>
+                {{-- カテゴリー説明入力 --}}
+                <div class="form-group">
+                    <label for="detail">カテゴリー説明</label>
+                    <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}" placeholder="説明" />
+                </div>
                 {{-- カテゴリー順番入力 --}}
                 <div class="form-group">
                     <label for="order">カテゴリー順番</label>

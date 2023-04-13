@@ -19,6 +19,7 @@
 		<div class="m-md"></div>
 
 		<!--RV rental-->
+
 		<div class="container heading">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12">
@@ -26,6 +27,18 @@
 					<h2>{{$categories[0]->detail}}</h2>
 				</div>
 				<!-- .col-md-12 end -->
+			</div>
+			<!-- .row end -->
+			
+			<div class="row heading-desc">
+				<div class="col-xs-12 col-sm-12 col-md-10">
+					<p>Car Shop is a business theme. Perfectly suited for Auto Mechanic, Car Repair Shops, Car Wash, Garages, Automobile Mechanicals, Mechanic Workshops, Auto Painting, Auto Centres.</p>
+				</div>
+				<!-- .col-md-10 end -->
+				<div class="col-xs-12 col-sm-12 col-md-2">
+					<a class="btn btn-primary" href="{{route('category.show', $categories[1]->id)}}">View All</a>
+				</div>
+				<!-- .client end -->
 			</div>
 			<!-- .row end -->
 		</div>
@@ -69,9 +82,10 @@
 				<!-- .product end -->
 				
 				@endforeach
-
+				
 			</div>
 			<!-- .row end -->
+			
 		</div>
 
 		<!--BIKE rental-->
@@ -125,9 +139,10 @@
 				<!-- .product end -->
 				
 				@endforeach
-
+				
 			</div>
 			<!-- .row end -->
+			
 		</div>
 
 		<!-- .container end -->

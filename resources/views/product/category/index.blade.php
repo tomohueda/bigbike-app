@@ -27,6 +27,7 @@
                     <tr>
                         <th>ID</th>
                         <th>カテゴリー名</th>
+                        <th>詳細</th>
                         <th>説明</th>
                         <th>順番</th>
                         <th style="width: 70px"></th>
@@ -37,9 +38,8 @@
                         <tr>
                             <td>{{ $category->id }}</td>
                             <td>{{ $category->name }}</td>
-                            {{-- 説明 --}}
                             <td>{{ $category->detail }}</td>
-                            {{-- 順番 --}}
+                            <td>{{ $category->description }}</td>
                             <td>{{ $category->order }}</td>
                             <td>
                                 <a class="btn btn-primary btn-sm mb-2" href="{{ route('admin.product_categories.edit', $category->id) }}"

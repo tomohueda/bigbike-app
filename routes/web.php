@@ -26,11 +26,9 @@ use App\Http\Controllers\Products\ProductsController;
 |
 */
 
-Route::get('/', [TopPageController::class, 'show'])->name('top');
-
-Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
-
-Route::get('/category/{id}', [CategoryController::class, 'show'])->name('category.show');
+Route::get('/', [TopPageController::class, 'show'])->name('top')->middleware('setVars');
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show')->middleware('setVars');
+Route::get('/category/{id}', [CategoryController::class, 'show'])->name('category.show')->middleware('setVars');
 
 
 //Route::get('/about', [AboutPageController::class, 'show'])->name('about');

@@ -39,7 +39,16 @@
     <title>BIG BIKE HIROSHIMA-JAPAN RENTAL SERVICE</title>
     @endif
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9CGR6F5R5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-E9CGR6F5R5');
+</script>
+<!-- END Google tag (gtag.js) -->
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3CMR8S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

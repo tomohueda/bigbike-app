@@ -34,7 +34,7 @@
 <!-- Document Title
     ============================================= -->
     @isset($title)
-    <title>{{ $title }} - BIGBIKE</title>
+    <title>{{ $title }} - BIG BIKE HIROSHIMA-JAPAN RENTAL SERVICE</title>
     @else
     <title>BIG BIKE HIROSHIMA-JAPAN RENTAL SERVICE</title>
     @endif

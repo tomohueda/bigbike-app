@@ -40,7 +40,10 @@ class ProductController extends Controller
         $product = ProductService::getProduct($id);
         return view (
             'carshop.product',
-            ['product' => $product,]
+            [
+                'product' => $product,
+                'title' => $product->name,
+            ]
         );
     }
 

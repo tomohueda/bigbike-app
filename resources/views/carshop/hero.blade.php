@@ -19,9 +19,9 @@
 									<h2>BIGBIKE HEROSHIMA <span class="color-theme">RENTAL SERVICE</span></h2>
 								</div>
 								<div class="slide-desc"> Car Shop is a business theme. Perfectly suited for Auto Mechanic, Car Repair Shops, Car Wash, Garages, Automobile Mechanicals, Mechanic Workshops, Auto Painting, Auto Centres. </div>
-								<div class="slide-action">
+								<!--<div class="slide-action">
 									<a class="btn btn-primary" href="#">Check It Now</a>
-								</div>
+								</div>-->
 							</div>
 						</div>
 						<!-- .col-md-12 end -->

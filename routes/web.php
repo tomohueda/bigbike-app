@@ -30,6 +30,9 @@ Route::get('/', [TopPageController::class, 'show'])->name('top')->middleware('se
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show')->middleware('setVars');
 Route::get('/category/{id}', [CategoryController::class, 'show'])->name('category.show')->middleware('setVars');
 
+Route::get('/faq', function () {
+    return view('carshop.faq');
+})->middleware('setVars')->name('faq');
 
 //Route::get('/about', [AboutPageController::class, 'show'])->name('about');
 

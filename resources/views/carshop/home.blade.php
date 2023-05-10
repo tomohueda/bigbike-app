@@ -1,6 +1,9 @@
 <!-- Featured Items
 ============================================= -->
 <section id="featuredItems" class="shop">
+
+@include("carshop.step")
+
 		<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
@@ -17,6 +20,8 @@
 		</div>
 		<!-- .container end -->
 		<div class="m-md"></div>
+
+		
 
 		<!--RV rental-->
 

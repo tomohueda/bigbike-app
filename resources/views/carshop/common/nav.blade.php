@@ -1,32 +1,5 @@
     <!-- Navigation-->
     <header id="navbar-spy" class="header header-1">
-		<div class="top-bar">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-md-5">
-						<ul class="list-inline top-contact">
-							<li><span>Phone :</span> + 2 0106 5370701</li>
-							<li><span>Email :</span> 7oroof@7oroof.com</li>
-						</ul>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-7">
-						<ul class="list-inline pull-right top-links">
-							<li>
-								<a href="#">Wishlist</a>
-							</li>
-							<li>
-								<a href="#">Checkout</a>
-							</li>
-							<li>
-								<a href="#">Stores</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!-- .row end -->
-			</div>
-			<!-- .container end -->
-		</div>
 		<!-- .top-bar end -->
 		<nav id="primary-menu" class="navbar navbar-fixed-top">
 			<div class="container">
@@ -47,25 +20,19 @@
 				<div class="collapse navbar-collapse pull-right" id="header-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-left">
 						<li class="has-dropdown active">
-							<a href="#" data-toggle="dropdown" class="dropdown-toggle">Home</a>
+							<a href="{{route('top')}}">Home</a>
 						</li>
-						<!-- li end -->
 						<li class="has-dropdown">
-							<a href="#" data-toggle="dropdown" class="dropdown-toggle">shop</a>
+							<a href="{{route('category.show', $categories[0]->id)}}">RENT RVs</a>
 						</li>
-						<!-- li end -->
+						<li class="has-dropdown">
+							<a href="{{route('category.show', $categories[1]->id)}}">RENT MOTORCYCLE</a>
+						</li>
 						<li>
 							<a href="about.html">about</a>
 						</li>
 						<li class="has-dropdown">
-							<a href="#" data-toggle="dropdown" class="dropdown-toggle">pages</a>
-						</li>
-						<li class="has-dropdown">
-							<a href="#" data-toggle="dropdown" class="dropdown-toggle">features</a>
-						</li>
-						<!-- li end -->
-						<li class="has-dropdown">
-							<a href="#" data-toggle="dropdown" class="dropdown-toggle">blog</a>
+							<a href="{{route('faq')}}">faq</a>
 						</li>
 						<li class="has-dropdown pull-left">
 							<a href="#" data-toggle="dropdown" class="dropdown-toggle">contact</a>

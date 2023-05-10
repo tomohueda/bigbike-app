@@ -136,5 +136,5 @@
 		<!-- .container end -->
 	</section>
 	<!-- #blog end -->
-
+	@include("carshop.step")
 @include("carshop.common.footer")

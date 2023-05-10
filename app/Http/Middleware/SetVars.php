@@ -25,6 +25,7 @@ class SetVars
         $classes = ProductService::getRentalClasses();
         $this->viewFactory->share('categories', $categories);
         $this->viewFactory->share('classes', $classes);
+        $this->viewFactory->share('path', $request->path());
         return $next($request);
     }
 }

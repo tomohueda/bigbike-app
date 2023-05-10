@@ -16,9 +16,9 @@
 								</div>-->
 								<div class="slide-heading"> The Best Rental Service For Traveling Hiroshima Japan </div>
 								<div class="slide-title">
-									<h2>BIGBIKE HEROSHIMA <span class="color-theme">RENTAL SERVICE</span></h2>
+									<h2>BIGBIKE HIROSHIMA <span class="color-theme">JAPAN RENTAL SERVICE</span></h2>
 								</div>
-								<div class="slide-desc"> Car Shop is a business theme. Perfectly suited for Auto Mechanic, Car Repair Shops, Car Wash, Garages, Automobile Mechanicals, Mechanic Workshops, Auto Painting, Auto Centres. </div>
+								<div class="slide-desc">We rent motorcycles and campervans. Easy booking by phone or the Internet, You can easily rent a vehicle.</div>
 								<!--<div class="slide-action">
 									<a class="btn btn-primary" href="#">Check It Now</a>
 								</div>-->

@@ -65,6 +65,8 @@
 						<p class="subheading">Location</p>
 						<h2>Departure and return point</h2>
 					</div>
+					<img class="img" src="{{asset('/assets/img/chugoku_edit.svg')}}" alt="chugoku_edit">
+					<div class="clearfix mb-50"></div>
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d377.40657094437574!2d132.43651192690098!3d34.38817749257295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f150!3m3!1m2!1s0x355aa25ef33e0461%3A0x313720ea6c0403be!2z44CSNzMzLTAwMzMgSGlyb3NoaW1hLCBOaXNoaSBXYXJkLCBLYW5vbmhvbm1hY2hpLCAxLWNoxY1tZeKIkjE14oiSMTUg56ys5LiJ5bGx5LiL44OT44Or!5e0!3m2!1sen!2sjp!4v1683715589134!5m2!1sen!2sjp" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 					<table class="table-bordered table table-sm">

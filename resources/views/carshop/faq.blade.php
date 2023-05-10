@@ -15,7 +15,7 @@
 		<!-- .container end -->
 	</section>
 	<!-- #page-title end -->
-	@include("carshop.step")
+
 	<!-- FQA Section
 ============================================= -->
 	<section id="faqss" class="faqs faqs-1">

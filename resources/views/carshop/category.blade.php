@@ -78,5 +78,6 @@
 	</section>
 	<!-- #blog end -->
 	@include("carshop.step")
+	@include("carshop.company")
 
 @include("carshop.common.footer")

@@ -358,5 +358,6 @@ Please do not forget to receive a certificate of accident from the police.
             </div>
         </div>
     </section>
-
+	<div class="clearfix mb-150"></div>
+	@include("carshop.company")
 @include("carshop.common.footer")

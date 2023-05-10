@@ -34,6 +34,9 @@ Route::get('/faq', function () {
     return view('carshop.faq');
 })->middleware('setVars')->name('faq');
 
+Route::get('/about', function () {
+    return view('carshop.about');
+})->middleware('setVars')->name('about');
 //Route::get('/about', [AboutPageController::class, 'show'])->name('about');
 
 Route::get('/dashboard', function () {

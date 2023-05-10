@@ -29,13 +29,10 @@
 							<a href="{{route('category.show', $categories[1]->id)}}">RENT MOTORCYCLE</a>
 						</li>
 						<li>
-							<a href="about.html">about</a>
+							<a href="{{route('about')}}">contact</a>
 						</li>
 						<li class="has-dropdown">
 							<a href="{{route('faq')}}">faq</a>
-						</li>
-						<li class="has-dropdown pull-left">
-							<a href="#" data-toggle="dropdown" class="dropdown-toggle">contact</a>
 						</li>
 						<!-- li end -->
 					</ul>

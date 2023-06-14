@@ -23,11 +23,11 @@
 						</tr>
 						<tr>
 						<td valign="top">Phone</td>
-						<td>+81 50-6861-5819</td>
+						<td>+81 82-942-2033</td>
 						</tr>
 						<tr>
 						<td valign="top">Mail</td>
-						<td>aaaaa@aaaaaaaa</td>
+						<td>kannonn@bigbike.jp</td>
 						</tr>
 						<tr>
 						<td valign="top">Address</td>
